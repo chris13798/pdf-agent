@@ -2,7 +2,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 import os
 
-# ✅ 从 backend 子目录引入
+
 from backend.pdf_parser import parse_pdf
 
 from backend.qa_engine import (
@@ -38,7 +38,6 @@ def upload_pdf():
         file.save(filepath)
         
         
-        # 🧪 加入 PDF 解析测试
         text, images = parse_pdf(filepath)
         print(f"提取文本页数: {len(text)}")
         print(f"提取图片数量: {len(images)}")
@@ -68,12 +67,12 @@ def ask_question():
 
     text, images = parse_pdf(filepath)
 
-    # ✅ 判断是否是图像问题
+
     if is_figure_question(question):
         result = handle_figure_question(question, images)
         return jsonify(result)
 
-    # 普通问答流程
+
     context_blocks = retrieve_relevant_context(question, text)
     answer = answer_question(question, context_blocks)
 

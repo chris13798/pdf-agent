@@ -5,7 +5,7 @@ import re
 import base64
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from llm.qwen_client import call_qwen_plus  # ✅ 统一使用新版模型调用
+from llm.qwen_client import call_qwen_plus  
 
 
 def retrieve_relevant_context(question, pages_text, top_k=3):
@@ -24,7 +24,7 @@ def retrieve_relevant_context(question, pages_text, top_k=3):
 
     results = []
     for idx in top_k_indices:
-        # ⏬ 限制每段最多500字符
+     
         short_text = texts[idx][:500] + ("..." if len(texts[idx]) > 500 else "")
         results.append({
             "page": pages[idx],
