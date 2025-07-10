@@ -22,21 +22,21 @@
 git clone https://github.com/your-repo/pdf-agent.git
 cd pdf-agent
 
-2. 创建虚拟环境
-bash
+### 2. 创建虚拟环境
+```bash
 conda create -n pdfagent python=3.10
 conda activate pdfagent
 
-3. 安装依赖
-bash
+### 3. 安装依赖
+```bash
 pip install -r requirements.txt
 
-4. 设置 API Key（阿里云 DashScope）
-bash
+### 4. 设置 API Key（阿里云 DashScope）
+```bash
 export DASHSCOPE_API_KEY=你的API密钥
 
-5. 启动服务
-bash
+### 5. 启动服务
+```bash
 python app.py
 浏览器访问 http://127.0.0.1:5000 即可使用。
 
