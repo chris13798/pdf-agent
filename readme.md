@@ -1,6 +1,5 @@
 # 📄 PDF Agent
 
-
 该系统支持用户上传英文 PDF 文献，自动提取文字与图像信息，并提供自然语言问答、图像问答、原文依据展示等功能，提升用户对学术文献的理解效率。
 
 ---
@@ -21,22 +20,37 @@
 ```bash
 git clone https://github.com/your-repo/pdf-agent.git
 cd pdf-agent
+```
 
 ### 2. 创建虚拟环境
+
 ```bash
 conda create -n pdfagent python=3.10
 conda activate pdfagent
+```
 
 ### 3. 安装依赖
+
 ```bash
 pip install -r requirements.txt
+```
 
 ### 4. 设置 API Key（阿里云 DashScope）
+
 ```bash
 export DASHSCOPE_API_KEY=你的API密钥
+```
 
 ### 5. 启动服务
+
 ```bash
 python app.py
-浏览器访问 http://127.0.0.1:5000 即可使用。
+```
 
+浏览器访问：
+
+```
+http://127.0.0.1:5000
+```
+
+即可使用系统前端界面。
