@@ -1,0 +1,22 @@
+# Web 后端
+Flask==2.3.2
+
+# PDF 解析
+pdfplumber==0.10.2
+PyMuPDF==1.22.3
+
+# 图像处理
+Pillow==9.5.0
+
+# 文本语义匹配与向量计算
+scikit-learn==1.2.2
+numpy==1.24.3
+
+# DashScope 官方 SDK（用于调用 Qwen 系列模型）
+dashscope==1.16.0
+
+# OpenAI 兼容调用（可选）
+openai==1.16.2
+
+# Markdown 渲染支持（前端可选）
+markdown==3.4.3
